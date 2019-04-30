@@ -6,7 +6,7 @@ spec:
   secretName: literallyapyramidscheme-com-tls
   issuerRef:
     name: letsencrypt-prod
-    type: ClusterIssuer
+    kind: ClusterIssuer
   commonName: literallyapyramidscheme.com
   dnsNames:
     - literallyapyramidscheme.com
