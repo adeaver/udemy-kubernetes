@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: literallyapyramidscheme-com-tls
+spec:
+  secretName: literallyapyramidscheme-com-tls
+  issuerRef:
+    name: letsencrypt-prod
+    type: ClusterIssuer
+  commonName: literallyapyramidscheme.com
+  dnsNames:
+    - literallyapyramidscheme.com
+    - www.literallyapyramidscheme.com
+  acme:
+    config:
+      - http01
+          ingressClass: nginx
+        domains:
+          - literallyapyramidscheme.com
+          - www.literallyapyramidscheme.com
